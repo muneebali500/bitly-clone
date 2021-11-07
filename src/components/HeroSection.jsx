@@ -94,16 +94,15 @@ const Center = styled.div`
 
   figure {
     position: relative;
-    height: 50vw;
+    height: calc(40vw + 10rem);
     width: 100%;
 
     ${mediumScreen({
-      height: `30vw`,
+      height: `36vw`,
     })}
 
     ${largeScreen({
       order: 2,
-      height: `40vw`,
       transform: `translateX(10rem)`,
     })}
 
@@ -112,17 +111,18 @@ const Center = styled.div`
       transform: `translateX(7.5rem)`,
     })}
 
-    /* img {
+    img {
       height: 100%;
       width: 100%;
-    } */
+    }
   }
 
   div.text {
-    margin-top: 3rem;
+    width: 80%;
 
     ${largeScreen({
       marginTop: 0,
+      width: `100%`,
     })}
 
     h1 {

@@ -5,7 +5,7 @@ import { getDocs, collection, query, where } from "@firebase/firestore";
 
 import styled from "styled-components";
 
-export default function GoLink() {
+export default function ShortLink() {
   useEffect(() => {
     console.log(`useeffect called`);
 
@@ -19,6 +19,7 @@ export default function GoLink() {
 
         const querySnapshot = await getDocs(q);
         querySnapshot.forEach((doc) => {
+          console.log(doc.data());
           return window.location.replace(doc.data().fullUrl);
         });
       } catch {

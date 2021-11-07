@@ -23,8 +23,8 @@ export default function UrlItem({ fullUrl, shortUrl }) {
 
   return (
     <UrlData>
-      <span>{fullUrl}</span>
-      <a href={fullUrl} target="blank" id={shortUID}>
+      <span>{fullUrl.slice(0, 60) + "..."}</span>
+      <a href={fullUrl} target="_blank" rel="noopener noreferrer" id={shortUID}>
         {shortUrl}
       </a>
       <button

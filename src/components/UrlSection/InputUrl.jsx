@@ -49,7 +49,7 @@ export default function InputUrl() {
         const querySnapshot = await getDocs(q);
         querySnapshot.forEach((doc) => {
           const fullAndShortUrl = {
-            fullUrl: doc.data().fullUrl.slice(0, 60) + "...",
+            fullUrl: doc.data().fullUrl,
             shortUrl: doc.data().shortUrl,
             date: doc.data().date,
           };

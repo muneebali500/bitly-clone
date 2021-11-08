@@ -27,13 +27,13 @@ export default function UrlItem({ fullUrl, shortUrl }) {
       <a href={fullUrl} target="_blank" rel="noopener noreferrer" id={shortUID}>
         {shortUrl}
       </a>
-      <button
+      {/* <button
         className="btn"
         data-clipboard-target={`#${shortUID}`}
         onClick={(e) => setCopyBtn(false)}
       >
         {copyBtn ? "Copy" : "Copied"}
-      </button>
+      </button> */}
     </UrlData>
   );
 }

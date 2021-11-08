@@ -9,16 +9,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route
-          exact
-          path="https://bitlyclone.netlify.app/"
-          element={<Home />}
-        />
-        <Route
-          exact
-          path="https://bitlyclone.netlify.app/:id"
-          element={<ShortLink />}
-        />
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/:id" element={<ShortLink />} />
       </Routes>
     </>
   );

@@ -74,7 +74,8 @@ export default function InputUrl() {
     // create urlsData object to add into database
     const urlsData = {
       fullUrl: inputValue,
-      shortUrl: `${window.location.href}${shortUID}`,
+      // shortUrl: `${window.location.href}${shortUID}`,
+      shortUrl: `https://bitlyclone.netlify.app/${shortUID}`,
       date: new Date(),
       ipAddress,
     };

@@ -4,9 +4,9 @@
 
 This is a clone project of [bitly website](https://bitly.com) using React, Firebase and Styled Componenets.
 
-[Link to Live Project]()
+[Link to Live Project](https://bitlyclone.netlify.app/)
 
-![bitly clone website](/public/)
+<!-- ![bitly clone website](/public/) -->
 
 
 ## Technologies Used

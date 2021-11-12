@@ -1,4 +1,4 @@
-# Bitly URLShortner Clone - React & Firebase
+# Bitly URL-Shortner Clone - React & Firebase
 
 ## Introduction
 

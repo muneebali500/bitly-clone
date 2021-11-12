@@ -32,7 +32,7 @@ This is a clone project of [bitly website](https://bitly.com) using React, Fireb
 
 The project was developed using VS Code editor and its integrated version control feature to commit gits, which are then pushed to GitHub in order to store the codes remotely.
 
-#### Firebase
+#### Netlify
 
 The project was deployed to Netlify
 

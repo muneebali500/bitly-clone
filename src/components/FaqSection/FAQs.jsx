@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { useAuthContext } from "../../store/Context";
+import { smallScreen } from "../../utils/responsive";
 
 import FAQ from "./FAQ";
 
@@ -22,14 +23,23 @@ export default function FAQs() {
 }
 
 const Section = styled.section`
-  padding: 6rem 0;
+  padding: 3rem 0.5rem;
+
+  ${smallScreen({
+    padding: `6rem 0`,
+  })}
 `;
 const SectionTitle = styled.h2`
   text-align: center;
-  font-size: 4rem;
+  font-size: 2.3rem;
   font-weight: bold;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   color: rgba(0, 0, 0, 0.8);
+
+  ${smallScreen({
+    fontSize: `4rem`,
+    marginBottom: `5rem`,
+  })}
 `;
 const QuestionContainer = styled.div`
   width: 112rem;

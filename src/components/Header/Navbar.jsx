@@ -17,7 +17,6 @@ export default function Navbar() {
 }
 
 const Nav = styled.nav`
-  /* border: 1px solid; */
   ${largeScreen({
     display: `flex`,
     alignItems: `center`,

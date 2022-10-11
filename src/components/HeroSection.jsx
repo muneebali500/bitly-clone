@@ -4,7 +4,7 @@ import {
   largeScreen,
   extraLargeScreen,
   mediumScreen,
-  // smallScreen,
+  smallScreen,
 } from "../utils/responsive";
 
 import { Menu } from "@material-ui/icons";
@@ -27,16 +27,15 @@ export default function HeroSection() {
       <Center>
         <figure>
           <img
-            src="https://docrdsfx76ssb.cloudfront.net/static/1635458173/pages/wp-content/uploads/2020/05/illo-mobile-810x480-1.jpg"
+            src="https://docrdsfx76ssb.cloudfront.net/static/1665157317/pages/wp-content/uploads/2022/08/home-hero-mobile-v2.png"
             alt="Illustration disaplys computers and other tools"
           />
         </figure>
         <div className="text">
-          <h1>Short links, big results</h1>
-          <p>
-            A URL shortener built with powerful tools to help you grow and
-            protect your brand.
-          </p>
+          <h1>
+            We’ve expanded! <br /> Shorten URLs. Generate QR Codes. <br /> And
+            now, create Link-in-bios.
+          </h1>
           <button>Get Started for Free</button>
         </div>
       </Center>
@@ -45,7 +44,6 @@ export default function HeroSection() {
 }
 
 const Container = styled.section`
-  min-height: 100vh;
   padding: 1rem 3%;
 `;
 
@@ -69,6 +67,7 @@ const Top = styled.div`
     outline: none;
     background-color: transparent;
     cursor: pointer;
+    z-index: 100;
 
     .icon {
       font-size: 4rem;
@@ -81,34 +80,35 @@ const Center = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transform: translateY(-3.4rem);
 
   ${largeScreen({
     flexDirection: `row`,
-    marginTop: `10rem`,
     overflow: `hidden`,
+    transform: `translateY(0)`,
   })}
 
   ${extraLargeScreen({
     marginLeft: `6%`,
-  })}  
+  })}
 
   figure {
     position: relative;
-    height: calc(40vw + 10rem);
     width: 100%;
 
     ${mediumScreen({
-      height: `36vw`,
+      width: `80%`,
     })}
 
     ${largeScreen({
       order: 2,
-      transform: `translateX(10rem)`,
+      transform: `translateX(5rem)`,
+      width: `100%`,
     })}
 
     ${extraLargeScreen({
       height: `30vw`,
-      transform: `translateX(7.5rem)`,
+      transform: `translateX(-5.5rem)`,
     })}
 
     img {
@@ -118,19 +118,23 @@ const Center = styled.div`
   }
 
   div.text {
-    width: 80%;
+    text-align: center;
 
     ${largeScreen({
       marginTop: 0,
-      width: `100%`,
+      width: `110%`,
+      textAlign: `left`,
     })}
 
     h1 {
-      font-size: 4rem;
-      color: rgba(0, 0, 0, 0.8);
+      font-size: 2rem;
+      color: #252628;
+      font-weight: 800;
+      margin-bottom: 1.8rem;
+      line-height: 1.4;
 
-      ${largeScreen({
-        fontSize: `6.5rem`,
+      ${smallScreen({
+        fontSize: `3.6rem`,
       })}
     }
 
@@ -146,10 +150,9 @@ const Center = styled.div`
 
     button {
       color: #fff;
-      padding: 1.4rem;
+      padding: 1.8rem 6rem;
       text-align: center;
-      width: 100%;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       border-radius: 5px;
       background-color: #0236b9;
       margin-top: 1rem;
@@ -157,10 +160,8 @@ const Center = styled.div`
       outline: none;
       cursor: pointer;
 
-      ${largeScreen({
-        width: `50%`,
-        padding: `2rem`,
-        fontSize: `1.8rem`,
+      ${smallScreen({
+        fontSize: `2rem`,
       })}
     }
   }

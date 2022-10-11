@@ -8,7 +8,10 @@ import { collection, getDocs, addDoc, query, where } from "firebase/firestore";
 
 // import styles from styled-components
 import styled from "styled-components";
-import { desktopMediumScreen } from "../../utils/responsive";
+import {
+  desktopMediumScreen,
+  desktopSmallScreen,
+} from "../../utils/responsive";
 
 export default function InputUrl() {
   // console.log(`app called`);
@@ -137,11 +140,15 @@ const Container = styled.section`
   justify-content: center;
   align-items: center;
   padding: 4rem 0;
+
+  ${desktopSmallScreen({
+    padding: `2.5rem 0`,
+  })}
 `;
 
 const Form = styled.form`
   width: 112rem;
-  max-width: 95%;
+  max-width: 90%;
   margin-bottom: 0rem;
   display: flex;
   flex-wrap: wrap;
@@ -153,6 +160,11 @@ const Form = styled.form`
     padding: 2rem;
     border-radius: 0.5rem;
     outline-color: #4c4cda;
+
+    ${desktopSmallScreen({
+      fontSize: `1.5rem`,
+      padding: `1.3rem`,
+    })}
   }
 
   button {
@@ -171,6 +183,11 @@ const Form = styled.form`
       margin: `1rem 0`,
     })}
 
+    ${desktopSmallScreen({
+      fontSize: `1.5rem`,
+      padding: `1.3rem 6rem`,
+    })}
+
     &:hover {
       background-color: #090999;
     }
@@ -178,10 +195,9 @@ const Form = styled.form`
 `;
 const UrlList = styled.ul`
   width: 112rem;
-  max-width: 95%;
+  max-width: 90%;
   list-style-type: none;
   border-radius: 3px;
-  margin-top: 2rem;
   overflow: hidden;
 
   ${desktopMediumScreen({

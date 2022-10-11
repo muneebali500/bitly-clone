@@ -1,6 +1,7 @@
 import { css } from "styled-components";
 
 /////////////// Mobile First Media Queries
+// 640 and above
 export const smallScreen = (props) => {
   return css`
     @media only screen and (min-width: 40em) {
@@ -9,6 +10,7 @@ export const smallScreen = (props) => {
   `;
 };
 
+// 768 and above
 export const mediumScreen = (props) => {
   return css`
     @media only screen and (min-width: 48em) {
@@ -17,6 +19,7 @@ export const mediumScreen = (props) => {
   `;
 };
 
+// 1024 and above
 export const largeScreen = (props) => {
   return css`
     @media only screen and (min-width: 64em) {
@@ -25,6 +28,7 @@ export const largeScreen = (props) => {
   `;
 };
 
+// 1280 and above
 export const extraLargeScreen = (props) => {
   return css`
     @media only screen and (min-width: 80em) {
@@ -38,6 +42,14 @@ export const extraLargeScreen = (props) => {
 export const desktopMediumScreen = (props) => {
   return css`
     @media only screen and (max-width: 48em) {
+      ${props}
+    }
+  `;
+};
+
+export const desktopSmallScreen = (props) => {
+  return css`
+    @media only screen and (max-width: 30em) {
       ${props}
     }
   `;

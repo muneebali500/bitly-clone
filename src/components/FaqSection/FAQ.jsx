@@ -2,6 +2,7 @@ import React from "react";
 import { useAuthContext } from "../../store/Context";
 
 import styled from "styled-components";
+import { smallScreen } from "../../utils/responsive";
 
 export default function FAQ({ id, question, answer, answerVisible }) {
   const { toggleFaqAnswer } = useAuthContext();
@@ -45,18 +46,26 @@ const Question = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 2.4rem;
+    font-size: 1.7rem;
     color: rgba(0, 0, 0, 0.7);
     padding: 1rem 2.5rem;
 
+    ${smallScreen({
+      fontSize: `2rem`,
+    })}
+
     button {
-      font-size: 4rem;
+      font-size: 2rem;
       color: rgba(0, 0, 0, 0.5);
       border: none;
       outline: none;
       cursor: pointer;
       background-color: transparent;
       transition: 0.3s ease;
+
+      ${smallScreen({
+        fontSize: `4rem`,
+      })}
     }
   }
 
@@ -64,8 +73,6 @@ const Question = styled.div`
     font-size: 1.6rem;
     color: rgba(0, 0, 0, 0.7);
     padding: 1rem 2.5rem;
-    /* height: 0; */
-    /* font-size: 0; */
     transition: 0.3s ease;
   }
 

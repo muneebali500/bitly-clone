@@ -21,11 +21,21 @@ export default function AuthProvider({ children }) {
   }
 
   useEffect(() => {
-    console.log(`useeffect called`);
-
     setIsLoading(true);
     window.innerWidth > 1024 ? setIsNavBarOpen(true) : setIsNavBarOpen(false);
   }, []);
+
+  useEffect(() => {
+    function windowResize() {
+      window.innerWidth > 1024 ? setIsNavBarOpen(true) : setIsNavBarOpen(false);
+    }
+
+    window.addEventListener(`resize`, windowResize);
+
+    return () => {
+      window.removeEventListener(`resize`, windowResize);
+    };
+  });
 
   return (
     <AuthContext.Provider

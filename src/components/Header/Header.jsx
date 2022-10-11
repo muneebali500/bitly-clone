@@ -35,7 +35,6 @@ export default function Header() {
 }
 
 const Container = styled.header`
-  /* border: 1px solid; */
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -61,7 +60,6 @@ const Container = styled.header`
 
     ${extraLargeScreen({
       left: `9%`,
-      top: 0,
     })}
   }
 `;
@@ -84,7 +82,9 @@ const CloseButton = styled.button`
 `;
 
 const ContainerBody = styled.div`
-  margin-top: 12vh;
+  margin-top: 11rem;
+  display: grid;
+  height: 100%;
 
   ${largeScreen({
     position: `absolute`,
@@ -100,8 +100,8 @@ const ContainerBody = styled.div`
 `;
 
 const AuthButtonWrapper = styled.div`
-  /* border: 1px solid; */
   background-color: blue;
+  align-self: flex-end;
 
   display: flex;
   flex-direction: column;
@@ -118,6 +118,7 @@ const AuthButtonWrapper = styled.div`
     padding: 0,
     height: `auto`,
     backgroundColor: `#fff`,
+    alignSelf: `center`,
   })}
 
   ${extraLargeScreen({

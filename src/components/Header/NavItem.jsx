@@ -8,14 +8,6 @@ import { ArrowDropDown } from "@material-ui/icons";
 export default function NavItem({ title, value, dropDown }) {
   const [isNavDropDown, setIsNavDropDown] = useState(false);
 
-  useEffect(() => {
-    console.log(`useeffect called`);
-    // const windowWidth =
-    window.innerWidth > 1024 ? setIsNavDropDown(true) : setIsNavDropDown(false);
-
-    // return windowWidth;
-  }, []);
-
   return (
     <Container>
       <NavItemName>
@@ -62,7 +54,6 @@ const Container = styled.ul`
 `;
 
 const NavItemName = styled.li`
-  /* border: 1px solid; */
   display: flex;
   justify-content: space-between;
   align-items: center;

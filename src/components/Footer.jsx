@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { mediumScreen, largeScreen } from "../utils/responsive";
+import { mediumScreen, largeScreen, smallScreen } from "../utils/responsive";
 
 import { footerNav } from "../utils/data";
 
@@ -60,13 +60,17 @@ export default function Footer() {
 
 const FooterSection = styled.footer`
   background-color: #0b1736;
-  padding: 6rem 0;
+  padding: 3rem 0;
+
+  ${smallScreen({
+    padding: `6rem 0`,
+  })}
 `;
 
 const NavContainer = styled.div`
   font-size: 1.5rem;
   width: 112rem;
-  max-width: 95%;
+  max-width: 90%;
   margin: 0 auto;
 
   ${largeScreen({
@@ -99,6 +103,7 @@ const NavContainer = styled.div`
 
   .copyright {
     width: 30rem;
+    line-height: 1.4;
 
     ${largeScreen({
       width: `40%`,

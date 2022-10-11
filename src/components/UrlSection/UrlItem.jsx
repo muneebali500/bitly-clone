@@ -40,25 +40,24 @@ export default function UrlItem({ fullUrl, shortUrl }) {
 
 const UrlData = styled.li`
   display: flex;
-  /* flex-wrap: wrap; */
   padding: 1.5rem 2rem;
   font-size: 1.5rem;
   column-gap: 2rem;
   background-color: #fff;
   color: rgba(0, 0, 0, 0.7);
   align-items: center;
-  /* border-radius: 3px; */
+  margin-top: 1rem;
 
   ${desktopMediumScreen({
     flexDirection: `column`,
-    marginBottom: `1rem`,
     borderRadius: `3px`,
+    padding: `1rem 2rem`,
   })}
 
   & > * {
     ${desktopMediumScreen({
       width: `100%`,
-      margin: `1rem 0`,
+      margin: `.5rem 0`,
     })}
   }
 

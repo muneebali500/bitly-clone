@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import styled from "styled-components";
 import { largeScreen } from "../../utils/responsive";
 
 import { ArrowDropDown } from "@material-ui/icons";
+import { useAuthContext } from "../../store/Context";
 
 export default function NavItem({ title, value, dropDown }) {
-  const [isNavDropDown, setIsNavDropDown] = useState(false);
+  const { isNavDropDown, setIsNavDropDown } = useAuthContext();
 
   return (
     <Container>

@@ -6,7 +6,7 @@ This is a clone project of [bitly website](https://bitly.com) using React, Fireb
 
 [Link to Live Project](https://bitlyclone.netlify.app/)
 
-![bitly clone website](/public/bitly.png)
+![bitly clone website](/public/bitly.jpg)
 
 
 ## Technologies Used

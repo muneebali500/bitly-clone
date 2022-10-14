@@ -4,7 +4,7 @@
 
 This is a clone project of [bitly website](https://bitly.com) using React, Firebase and Styled Components.
 
-[Link to Live Project](https://bitlyclone.netlify.app/)
+[Link to Live Project](https://bitly-clone.vercel.app/)
 
 ![bitly clone website](/public/bitly.jpg)
 
@@ -34,7 +34,7 @@ The project was developed using VS Code editor and its integrated version contro
 
 #### Netlify
 
-The project was deployed to Netlify
+The project was deployed to [Vercel](https://vercel.com)
 
 #### Forking the repository
 

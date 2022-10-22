@@ -7,7 +7,6 @@ const AuthContext = createContext();
 
 export default function AuthProvider({ children }) {
   const [isNavBarOpen, setIsNavBarOpen] = useState(false);
-  const [isNavDropDown, setIsNavDropDown] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [newFaqs, setNewFaqs] = useState(faqs);
 
@@ -15,7 +14,7 @@ export default function AuthProvider({ children }) {
     setNewFaqs(
       newFaqs.map((faq) =>
         faq.id === Number(id)
-          ? { ...faq, answerVisible: faq.answerVisible ? false : true }
+          ? { ...faq, answerVisible: !faq.answerVisible }
           : { ...faq, answerVisible: false }
       )
     );
@@ -24,15 +23,11 @@ export default function AuthProvider({ children }) {
   useEffect(() => {
     setIsLoading(true);
     window.innerWidth > 1024 ? setIsNavBarOpen(true) : setIsNavBarOpen(false);
-    window.innerWidth > 1024 ? setIsNavDropDown(true) : setIsNavDropDown(false);
   }, []);
 
   useEffect(() => {
     function windowResize() {
       window.innerWidth > 1024 ? setIsNavBarOpen(true) : setIsNavBarOpen(false);
-      window.innerWidth > 1024
-        ? setIsNavDropDown(true)
-        : setIsNavDropDown(false);
     }
 
     window.addEventListener(`resize`, windowResize);
@@ -49,8 +44,6 @@ export default function AuthProvider({ children }) {
         setIsNavBarOpen,
         newFaqs,
         toggleFaqAnswer,
-        isNavDropDown,
-        setIsNavDropDown,
       }}
     >
       {isLoading && children}

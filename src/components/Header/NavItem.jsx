@@ -1,13 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import styled from "styled-components";
 import { largeScreen } from "../../utils/responsive";
 
 import { ArrowDropDown } from "@material-ui/icons";
-import { useAuthContext } from "../../store/Context";
+// import { useAuthContext } from "../../store/Context";
 
 export default function NavItem({ title, value, dropDown }) {
-  const { isNavDropDown, setIsNavDropDown } = useAuthContext();
+  // const { isNavDropDown, setIsNavDropDown } = useAuthContext();
+  const [isNavDropDown, setIsNavDropDown] = useState(false);
+
+  useEffect(() => {
+    window.innerWidth > 1024 ? setIsNavDropDown(true) : setIsNavDropDown(false);
+  }, []);
+
+  useEffect(() => {
+    function windowResize() {
+      window.innerWidth > 1024
+        ? setIsNavDropDown(true)
+        : setIsNavDropDown(false);
+    }
+
+    window.addEventListener(`resize`, windowResize);
+
+    return () => {
+      window.removeEventListener(`resize`, windowResize);
+    };
+  });
 
   return (
     <Container>
